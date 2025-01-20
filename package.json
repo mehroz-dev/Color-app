@@ -1,0 +1,61 @@
+{
+  "name": "material-colors",
+  "appDisplayName": "Material Colors",
+  "productName": "Material Colors",
+  "appBundleId": "net.nurik.roman.materialcolors",
+  "version": "2.0.3",
+  "description": "A quick color palette for material design colors.",
+  "main": "main.js",
+  "author": "Roman Nurik",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf build dist .electron-cache",
+    "start": "electron-webpack dev",
+    "dist": "electron-webpack && electron-builder && node ./scripts/make-mac-zip.js"
+  },
+  "build": {
+    "appId": "net.nurik.roman.materialcolors",
+    "mac": {
+      "target": "dir",
+      "category": "public.app-category.developer-tools"
+    }
+  },
+  "electronWebpack": {
+    "commonSourceDirectory": "src/common",
+    "staticSourceDirectory": "static",
+    "main": {
+      "sourceDirectory": "src/main",
+      "webpackConfig": "webpack.main.additions.js"
+    },
+    "renderer": {
+      "sourceDirectory": "src/ui",
+      "webpackConfig": "webpack.renderer.additions.js"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-react": "^7.12.13",
+    "@babel/register": "^7.13.8",
+    "archiver": "^5.3.0",
+    "css-loader": "5",
+    "electron": "^11.0.3",
+    "electron-builder": "^22.10.5",
+    "electron-webpack": "^2.8.2",
+    "node-sass": "^5.0.0",
+    "plist": "^3.0.1",
+    "regenerator-runtime": "^0.13.7",
+    "sass-loader": "10",
+    "webpack": "^4.46.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "electron-positioner": "^4.1.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "source-map-support": "^0.5.19",
+    "tinycolor2": "^1.4.2",
+    "yargs": "^16.1.1"
+  }
+}
