@@ -1,0 +1,43 @@
+/**
+ * Copyright 2021 Google LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@mixin theme-light {
+  --theme-color-bg: #fff;
+  --theme-color-on-primary: #{rgba(#000, .87)};
+  --theme-color-on-secondary: #{rgba(#000, .54)};
+  --theme-color-on-tertiary: #{rgba(#000, .38)};
+  --theme-color-on-disabled: #{rgba(#000, .26)};
+  --theme-color-thin-border: #{rgba(#000, .12)};
+
+  --theme-color-tooltip-bg: #263238;
+  --theme-color-tooltip-text: #fff;
+
+  --theme-alpha-pattern: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMEgxNlYxNkgwVjBaIiBmaWxsPSJibGFjayIgZmlsbC1vcGFjaXR5PSIwLjIiLz4KPHBhdGggZD0iTTE2IDE2SDMyVjMySDE2VjE2WiIgZmlsbD0iYmxhY2siIGZpbGwtb3BhY2l0eT0iMC4yIi8+Cjwvc3ZnPgo=);
+}
+
+@mixin theme-dark {
+  --theme-color-bg: #3c3c3c;
+  --theme-color-on-primary: #fff;
+  --theme-color-on-secondary: #{rgba(#fff, .7)};
+  --theme-color-on-tertiary: #{rgba(#fff, .5)};
+  --theme-color-on-disabled: #{rgba(#fff, .3)};
+  --theme-color-thin-border: #{rgba(#fff, .2)};
+
+  --theme-color-tooltip-bg: #fff;
+  --theme-color-tooltip-text: #333;
+
+  --theme-alpha-pattern: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgMEgxNlYxNkgwVjBaIiBmaWxsPSJ3aGl0ZSIgZmlsbC1vcGFjaXR5PSIwLjQiLz4KPHBhdGggZD0iTTE2IDE2SDMyVjMySDE2VjE2WiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC40Ii8+Cjwvc3ZnPgo=);
+}
